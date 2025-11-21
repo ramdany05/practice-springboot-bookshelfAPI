@@ -153,6 +153,13 @@ The project includes sample documentation:
 2. Example: `src/main/resources/markdown/api-guide.md`
 3. Access it at: `http://localhost:8080/docs/api-guide`
 
+**File Naming Rules:**
+- Use only alphanumeric characters, hyphens, and underscores
+- Valid examples: `intro`, `api-guide`, `setup_instructions`
+- Invalid examples: `../config`, `file.name`, `directory/file`
+
+**Security Note**: The controller validates file names to prevent path traversal attacks.
+
 ### Serving Static Markdown (Alternative)
 
 If you want to serve Markdown files directly without HTML conversion:
